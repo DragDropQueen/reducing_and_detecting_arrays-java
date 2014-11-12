@@ -63,4 +63,12 @@ public class StudentsTest {
 
         assertEquals(false, students.studentPresent("Link"));
     }
+
+    @Test
+    public void returnsAHashOfStudentsGroupedByAge() {
+       assertEquals("Sue", students.groupByAge(10)[0]);
+       assertEquals("Greg", students.groupByAge(15)[0]);
+       assertEquals("Amanda", students.groupByAge(8)[0]);
+       assertEquals("Steve", students.groupByAge(22)[0]);
+    }
 }

@@ -1,5 +1,6 @@
 package students;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -80,5 +81,17 @@ public class Students {
         }
 
         return false;
+    }
+
+    public Object[] groupByAge(int age) {
+        ArrayList<String> agedStudents = new ArrayList();
+
+        for ( Student student : students ) {
+            if (student.age() == age) {
+                agedStudents.add(student.name());
+            }
+        }
+
+        return agedStudents.toArray();
     }
 }
